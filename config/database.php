@@ -41,7 +41,7 @@ return [
 	| All database work in Laravel is done through the PHP PDO facilities
 	| so make sure you have the driver for your particular database of
 	| choice installed on your machine before you begin development.
-	| https://github.com/mitulgolakiya/laravel-api-generator
+	|
 	*/
 
 	'connections' => [
@@ -55,9 +55,9 @@ return [
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', 'localhost'),
-			'database'  => env('DB_DATABASE', 'bennet'),
-			'username'  => env('DB_USERNAME', 'newuser'),
-			'password'  => env('DB_PASSWORD', 'admin'),
+			'database'  => env('DB_DATABASE', 'forge'),
+			'username'  => env('DB_USERNAME', 'forge'),
+			'password'  => env('DB_PASSWORD', ''),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
