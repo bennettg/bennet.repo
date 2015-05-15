@@ -8,10 +8,9 @@ class CreateSoftwareTable extends Migration {
 	public function up()
 	{
 		Schema::create('software', function(Blueprint $table) {
-			$table->increments('id');
+			$table->increments('soft_id');
 			$table->timestamps();
 			$table->softDeletes();
-			$table->increments('soft_id');
 			$table->string('soft_family', 4)->index();
 			$table->string('soft_type')->index();
 			$table->boolean('soft_status')->default(0);

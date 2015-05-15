@@ -8,7 +8,7 @@ class CreateSoftProductsTable extends Migration {
 	public function up()
 	{
 		Schema::create('soft_products', function(Blueprint $table) {
-			$table->increments('id');
+			$table->increments('soft_prod_id');
 			$table->softDeletes();
 			$table->timestamps();
 			$table->string('soft_product_code', 3)->unique();

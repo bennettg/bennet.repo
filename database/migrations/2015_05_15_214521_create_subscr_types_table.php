@@ -8,7 +8,7 @@ class CreateSubscrTypesTable extends Migration {
 	public function up()
 	{
 		Schema::create('subscr_types', function(Blueprint $table) {
-			$table->increments('id');
+			$table->increments('soft_sub_type_id');
 			$table->timestamps();
 			$table->softDeletes();
 			$table->string('subsc_name')->index();

@@ -8,7 +8,7 @@ class CreateSoftSubscriptionTable extends Migration {
 	public function up()
 	{
 		Schema::create('soft_subscription', function(Blueprint $table) {
-			$table->increments('id');
+			$table->increments('soft_subscr_id');
 			$table->timestamps();
 			$table->softDeletes();
 			$table->string('subscr_type')->default(' ');
