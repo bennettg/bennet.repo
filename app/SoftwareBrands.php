@@ -14,7 +14,7 @@ class SoftwareBrands extends Model {
 
 	protected $dates = ['deleted_at'];
 	protected $fillable = array('code', 'brand_name');
-	protected $visible = array('code', 'brand_name');
+	protected $visible = array('id', 'code', 'brand_name');
 
 	public function brand_relationship()
 	{

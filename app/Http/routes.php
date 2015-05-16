@@ -17,9 +17,10 @@ Route::get('/', function()
 });
 
 
-Route::resource('users', 'UsersController');
+Route::resource('user', 'UserController');
 Route::resource('software', 'SoftwareController');
 Route::resource('softsubscription', 'SoftSubscriptionController');
 Route::resource('softwarebrands', 'SoftwareBrandsController');
 Route::resource('softwareproducts', 'SoftwareProductsController');
 Route::resource('subscriptiontypes', 'SubscriptionTypesController');
+Route::resource('installedsoftware', 'InstalledSoftwareController');

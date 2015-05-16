@@ -1,34 +1,21 @@
-<?php namespace App;
+<?php
 
-use Illuminate\Auth\Authenticatable;
+namespace App;
+
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Auth\Passwords\CanResetPassword;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
+class User extends Model {
 
-	use Authenticatable, CanResetPassword;
+	protected $table = 'user';
+	public $timestamps = true;
 
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-	protected $table = 'users';
+	use SoftDeletes;
 
-	/**
-	 * The attributes that are mass assignable.
-	 *
-	 * @var array
-	 */
-	protected $fillable = ['name', 'email', 'password'];
-
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-	protected $hidden = ['password', 'remember_token'];
+	protected $dates = ['deleted_at'];
+	protected $guarded = array('password');
+	protected $fillable = array('username', 'first_name', 'last_name', 'address1', 'address2', 'address3', 'state', 'zip', 'phone', 'mobile', 'email');
+	protected $visible = array('id', 'username', 'first_name', 'last_name', 'address1', 'address2', 'address3', 'state', 'zip', 'phone', 'mobile', 'email');
+	protected $hidden = array('password');
 
 }

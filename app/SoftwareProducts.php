@@ -14,9 +14,9 @@ class SoftwareProducts extends Model {
 
 	protected $dates = ['deleted_at'];
 	protected $fillable = array('soft_product_code', 'soft_product_name', 'soft_product_type');
-	protected $visible = array('soft_product_code', 'soft_product_name', 'soft_product_type', 'term_monthly', 'term_quarterly', 'term_semi_yearly');
+	protected $visible = array('id', 'soft_product_code', 'soft_product_name', 'soft_product_type', 'term_monthly', 'term_quarterly', 'term_semi_yearly');
 
-	public function software_product_relation()
+	public function software_product_relations()
 	{
 		return $this->belongsTo('Software', 'soft_product');
 	}

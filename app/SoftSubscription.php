@@ -13,7 +13,7 @@ class SoftSubscription extends Model {
 	use SoftDeletes;
 
 	protected $dates = ['deleted_at'];
-	protected $visible = array('subscr_type');
+	protected $visible = array('id', 'subscr_type');
 
 	public function software_relationship()
 	{

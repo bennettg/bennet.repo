@@ -1,6 +1,10 @@
 {!! Form::open(array('route' => 'route.name', 'method' => 'POST')) !!}
 	<ul>
 		<li>
+			{!! Form::label('user_id', 'User_id:') !!}
+			{!! Form::text('user_id') !!}
+		</li>
+		<li>
 			{!! Form::label('soft_family', 'Soft_family:') !!}
 			{!! Form::text('soft_family') !!}
 		</li>
