@@ -11,11 +11,22 @@
 |
 */
 
+/*
 Route::get('/', function()
 {
 	return View::make('hello');
 });
+*/
 
+Route::group(['prefix' => 'clientreq'], function()
+{
+    Route::get('clouddate', ['uses' => 'SoftRequestController@getCloudDate']);
+});
+
+Route::get('/', function() 
+{
+	return "you've reached the main page (TEST)";
+});
 
 Route::resource('user', 'UserController');
 Route::resource('software', 'SoftwareController');
